@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/productos/registro}" th:object="${product}" method="post">
+  <div class="container d-flex flex-row justify-content-around">
+    <div class="fieldTextName d-flex flex-column text-center m-0">
+      <p>NOMBRE</p>
+      <input type="text" name="id" th:field="*{nombre}" placeholder="Introduce el Nombre"/>
+    </div>
+    <div class="fieldTextPrice d-flex flex-column text-center m-0">
+      <p>PRECIO</p>
+      <input type="text" name="id" th:field="*{precio}" placeholder="Introduce el Precio"/>
+    </div>
+    <div class="fieldBtnSubmit d-flex align-items-center">
+      <button type="submit" class="btn btn-info border border-info-subtle border-radius text-white ">GUARDAR</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
